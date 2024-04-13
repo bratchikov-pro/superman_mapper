@@ -1,5 +1,7 @@
 from telegram.ext import MessageHandler, filters, Application
 from telegram import Update
+
+from cmd.config import load_config
 from dal.open_maps_broker.open_maps_broker import OpenMapsBroker
 from dal.entities import Location
 

@@ -11,7 +11,7 @@ osm_broker:
   categories_to_amenities_map:
     "catering":
       "name": "Питание"
-      "amenity": [
+      "amenities": [
         "bar",
         "biergarten",
         "cafe",
@@ -20,64 +20,64 @@ osm_broker:
         "pub",
         "restaurant"
       ]
-      "education":
-        "name": "Образование"
-        "amenity": [
-          "college",
-          "driving_school",
-          "kindergarten",
-          "language_school",
-          "library",
-          "music_school",
-          "school",
-          "university"
-        ]
-      "transport":
-        "name": "Транспорт"
-        "amenity": [
-          "bicycle_parking",
-          "bus_station",
-          "car_wash",
-          "vehicle_inspection",
-          "charging_station",
-          "fuel",
-          "motorcycle_parking",
-          "parking",
-          "taxi"
-        ]
-      "finance":
-        "name": "Финансы"
-        "amenity": [
-          "atm",
-          "bank",
-          "bureau_de_change"
-        ]
-      "health":
-        "name": "Здоровье"
-        "amenity": [
-          "clinic",
-          "dentist",
-          "doctors",
-          "hospital",
-          "pharmacy",
-          "veterinary"
-        ]
-      "entertainment":
-        "name": "Развлечение"
-        "amenity": [
-          "casino",
-          "cinema",
-          "community_centre",
-          "conference_centre",
-          "events_venue",
-          "nightclub",
-          "theatre"
-        ]
-      "other":
-        "name": "Другое"
-        "amenity": [
-          "toilets",
-          "recycling",
-          "waste_disposal",
-          "marketplace"
-        ]
+    "education":
+      "name": "Образование"
+      "amenities": [
+        "college",
+        "driving_school",
+        "kindergarten",
+        "language_school",
+        "library",
+        "music_school",
+        "school",
+        "university"
+      ]
+    "transport":
+      "name": "Транспорт"
+      "amenities": [
+        "bicycle_parking",
+        "bus_station",
+        "car_wash",
+        "vehicle_inspection",
+        "charging_station",
+        "fuel",
+        "motorcycle_parking",
+        "parking",
+        "taxi"
+      ]
+    "finance":
+      "name": "Финансы"
+      "amenities": [
+        "atm",
+        "bank",
+        "bureau_de_change"
+      ]
+    "health":
+      "name": "Здоровье"
+      "amenities": [
+        "clinic",
+        "dentist",
+        "doctors",
+        "hospital",
+        "pharmacy",
+        "veterinary"
+      ]
+    "entertainment":
+      "name": "Развлечение"
+      "amenities": [
+        "casino",
+        "cinema",
+        "community_centre",
+        "conference_centre",
+        "events_venue",
+        "nightclub",
+        "theatre"
+      ]
+    "other":
+      "name": "Другое"
+      "amenities": [
+        "toilets",
+        "recycling",
+        "waste_disposal",
+        "marketplace"
+      ]
