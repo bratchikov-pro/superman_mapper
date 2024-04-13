@@ -62,4 +62,4 @@ def load_config():
         factory = dataclass_factory.Factory()
         config: Config = factory.load(yaml_config, Config)
 
-        pprint(config)
+        return config
