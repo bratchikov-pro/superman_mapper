@@ -33,7 +33,7 @@ class OpenMapsBroker(GeoBroker):
 
         for api_node in response.nodes:
             try:
-                node = self.convert_api_node(self, api_node)
+                node = self.convert_api_node(api_node)
                 nodes.append(node)
             except PartialNodeInfo:
                 continue
