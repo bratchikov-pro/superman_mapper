@@ -9,5 +9,6 @@ telegram_bot:
   workers_count: 1
 osm_broker:
   categories_to_amenities_map:
-    # TODO: заполнить категории
-
+    "transport":
+        "name": "Транспорт"
+        "amenities": ["cafe"]

@@ -5,7 +5,7 @@ import overpy
 from overpy import Node
 
 from dal.entities import GeoBroker, Location, Node
-from entities import PartialNodeInfo
+from .entities import PartialNodeInfo
 
 
 class OpenMapsBroker(GeoBroker):
