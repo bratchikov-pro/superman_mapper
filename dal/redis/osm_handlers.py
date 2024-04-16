@@ -2,7 +2,7 @@ import json
 
 from redis import Redis
 
-from dal.entities import Location
+from dal.entities import Location, Node
 
 
 class OSMRedisHelper:
@@ -10,9 +10,21 @@ class OSMRedisHelper:
         self.redis = redis
 
     async def set_location_info(self, chat_id: int, location: Location):
-        await self.redis.set(str(chat_id), json.dumps(location))
+        return self.redis.set(str(chat_id), json.dumps({
+            "latitude": location.latitude,
+            "longitude": location.longitude,
 
-    async def get_location_by_chat_id(self, chat_id: int) -> Location:
-        location_data = await self.redis.get(str(chat_id))
+            "search_distance": location.search_distance,
+        }))
+
+    def get_location_by_chat_id(self, chat_id: int) -> Location:
+        location_data = self.redis.get(str(chat_id))
         if location_data:
             return Location(**json.loads(location_data))
+
+    async def set_user_choice(self, chat_instance: str, choice: Node):
+        return self.redis.set(chat_instance, json.dumps({
+            "name": choice.name,
+            "latitude": choice.latitude,
+            "longitude": choice.longitude,
+        }))

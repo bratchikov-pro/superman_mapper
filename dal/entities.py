@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from abc import ABC, abstractmethod
+from typing import List
 
 
 @dataclass
@@ -22,5 +23,5 @@ class Location:
 
 class GeoBroker(ABC):
     @abstractmethod
-    def get_nodes_by_amenity(self, amenity: str, user_location: Location) -> Node: ...
+    def get_nodes_by_amenity(self, amenity: str, user_location: Location) -> List[Node]: ...
 
