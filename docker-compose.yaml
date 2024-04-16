@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis
+    container_name: redis_for_osm
+    environment:
+      - REDIS_PASS=${REDIS_PASSWORD}
+    command: redis-server --requirepass ${REDIS_PASS}
+    ports:
+      - "6379:6379"
+    env_file:
+      - .env
