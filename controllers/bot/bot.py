@@ -71,6 +71,7 @@ class TelegramBot:
         else:
             message = update.message
 
+
         location = Location(latitude=message.location.latitude, longitude=message.location.longitude)
 
         await self.redis.set_location_info(message.chat_id, location)
@@ -107,7 +108,7 @@ class TelegramBot:
             longitude=float(longitude),
         )
 
-        await self.redis.set_user_choice(query.chat_instance, node)
+        await self.redis.set_user_choice(query.message.chat.id, node)
 
         user_location = self.redis.get_location_by_chat_id(query.message.chat.id)
 
